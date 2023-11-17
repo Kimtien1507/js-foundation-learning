@@ -2,7 +2,7 @@ function countVowels(inputString) {
     // Sử dụng hàm match 
     let vowels = inputString.match(/[aeiouAEIOU]/g);
 
-    // Đếm số lượng nguyên âm
+    // Đếm số nguyên âm
     if (!vowels) {
         return 0;
       }

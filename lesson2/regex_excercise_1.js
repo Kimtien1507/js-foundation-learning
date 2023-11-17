@@ -6,7 +6,7 @@ let isValidEmail = function(email) {
     return emailRegex.test(email);
 };
 
-// Ví dụ sử dụng
+// Test with email
 let testEmail = "kimtien15071997@email.com";
 if (isValidEmail(testEmail)) {
     console.log(testEmail + " Is a valid email address");
