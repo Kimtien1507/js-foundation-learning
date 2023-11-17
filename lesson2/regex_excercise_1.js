@@ -1,4 +1,4 @@
-// Biểu thức chính quy cho địa chỉ email
+// Regex email
 let emailRegex = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Hàm kiểm tra địa chỉ email

@@ -51,5 +51,7 @@
 //     }
 // }
 // / and , or
-let a =5;
-console.log (a > 3 && b < 6);  
+// let a =5;
+// console.log (a > 3 && b < 6);  
+ //
+ 
