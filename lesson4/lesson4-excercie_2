@@ -1,0 +1,44 @@
+function solveQuadraticEquation(a, b, c) {
+    // Kiểm tra a, b, c có phải là số hay không
+    if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
+        throw new Error('Coefficients must be numbers.');
+    }
+
+    // Check hệ số a có phải là 0 hay không
+    if (a === 0) {
+        throw new Error('Coefficient "a" must not be zero for a quadratic equation.');
+    }
+
+    // Tính delta
+    const delta = b ** 2 - 4 * a * c;
+
+    // dùng switch để xác định nghiệm
+    switch (true) {
+        case delta > 0:
+            // Hai nghiệm phân biệt
+            const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            return `Two distinct real roots: x1 = ${x1}, x2 = ${x2}`;
+
+        case delta === 0:
+            // nghiệm kép
+            const x = -b / (2 * a);
+            return `One real root (double root): x = ${x}`;
+
+        default:
+            // Không có nghiệm 
+            const realPart = -b / (2 * a);
+            const imaginaryPart = Math.sqrt(Math.abs(delta)) / (2 * a);
+            return `Complex roots: x1 = ${realPart} + ${imaginaryPart}i, x2 = ${realPart} - ${imaginaryPart}i`;
+    }
+}
+
+try {
+    // Ví dụ sử dụng
+    console.log(solveQuadraticEquation(1, -3, 2)); // Two distinct real roots: x1 = 2, x2 = 1
+    console.log(solveQuadraticEquation(1, -4, 4)); // One real root (double root): x = 2
+    console.log(solveQuadraticEquation(1, 2, 5));  // Complex roots: x1 = -1 + 2i, x2 = -1 - 2i
+    console.log(solveQuadraticEquation(0, 2, 5));  // Exception: Coefficient "a" must not be zero for a quadratic equation.
+} catch (error) {
+    console.error(error.message);
+}

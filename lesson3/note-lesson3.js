@@ -43,8 +43,8 @@
 // console.log(arr);
 
 // const arr = ["A", "B", "C"]; //// Xoa phan tu
-//arr.splice(1,2,["D", "F"]); // ???????
-//console.log(arr);
+// arr.splice(1,2,["D", "F"]); // ???????
+// console.log(arr);
 
 // Cawt tuw vij tri nao -> vitri nao
 // const arr = ["A", "B", "C","D", "E"];
@@ -91,11 +91,14 @@
 // Date 
 // console.log(new Date());
 // console.log(new Date)
-// new Date 
-new Date (date.string);
-new Date(year, month)
+// // new Date 
+// new Date (date.string);
+// new Date(year, month)
 
-// Ham func
+// // Ham func
+function myFunction (a, b, c){
+    var x = a + b + c;
+}
 
 
 
